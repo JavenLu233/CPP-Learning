@@ -4,17 +4,19 @@
 
 ## 复杂度
 
+
+
 ### 时间复杂度
 
 **最佳情况 Ω(1) **： nums = [7, a, b, c, ...] ，即当数组首个数字为 77 时，无论 nums 有多少元素，线性查找的循环次数都为 11 次；
 **最差情况 O(N) ：**nums = [a, b, c, ...] 且 nums 中所有数字都不为 77 ，此时线性查找会遍历整个数组，循环 NN 次；
 **平均情况 Θ ：** 需要考虑输入数据的分布情况，计算所有数据情况下的平均时间复杂度；例如本题目，需要考虑数组长度、数组元素的取值范围等；
 
-![image-20220704095638920](D:\Desktop\JavenLu\Typora笔记\计算机学习\C++.assets\image-20220704095638920.png)
+![image-20220704095638920](assets\算法-SelfLearning-assets\image-20220704095638920.png)
 
 当运行次数与数据无关时，时间复杂度为1
 
-![image-20220704095927155](D:\Desktop\JavenLu\Typora笔记\计算机学习\C++.assets\image-20220704095927155.png)
+![image-20220704095927155](assets\算法-SelfLearning-assets\image-20220704095927155.png)
 
 冒泡排序的时间复杂对为O（N^2^）
 
@@ -37,7 +39,9 @@ vector <int> bubbleSort(vector<int>&nums){
 
 快速排序, 归并排序, 堆排序等算法的时间复杂度一般为 O(Nlog N)
 
-![image-20220715151600977](assets/image-20220715151600977-20220717142837-dy9ubxj.png)
+![image-20220715151600977](assets/算法-SelfLearning-assets/image-20220715151552579.png)
+
+
 
 ### 空间复杂度
 
@@ -98,6 +102,8 @@ int algorithm(int N){
 快速排序
 
 数字转化为字符串
+
+
 
 ## 高精度运算
 
@@ -339,6 +345,8 @@ void div(string str1,string str2,string &quotient,string &residue){
 
 ```
 
+
+
 ## 一些思想
 
 #### 专属值
@@ -357,6 +365,9 @@ void div(string str1,string str2,string &quotient,string &residue){
 ```
 
 即用一个数字来存储,不需要开六维数组,且可以保证每个专属值只可能在相同的情况下出现,一旦重复出现,必定是进入了死循环,由此得出两者无法相遇.
+
+
+
 
 
 ## STL
@@ -463,6 +474,10 @@ for(it = mp.begin();it != mp.end();it++){
 }
 ```
 
+
+
+
+
 ## 基础数据结构
 
 ### 栈
@@ -519,6 +534,8 @@ int main(){
 }
 ```
 
+
+
 ### 队列
 
 先进先出的线性结构
@@ -536,7 +553,7 @@ int main(){
 
 例题:洛谷P1540
 
-![image-20220406152757707](C:\Users\JavenLu\AppData\Roaming\Typora\typora-user-images\image-20220406152757707.png)
+![image-20220406152757707](assets\算法-SelfLearning-assets\image-20220406152757707.png)
 
 ```C++
 int n,m;
@@ -563,6 +580,8 @@ int main(){
 
 ```
 
+
+
 ### 堆
 
 #### 完全二叉树的线性表示
@@ -573,9 +592,9 @@ int main(){
 
 完全二叉树:满二叉树丢掉最后面的连续几个节点
 
-![image-20220406154346323](C:\Users\JavenLu\AppData\Roaming\Typora\typora-user-images\image-20220406154346323.png)
+![image-20220406154346323](assets\算法-SelfLearning-assets\image-20220406154346323.png)
 
-![image-20220406154435653](C:\Users\JavenLu\AppData\Roaming\Typora\typora-user-images\image-20220406154435653.png)
+![image-20220406154435653](assets\算法-SelfLearning-assets\image-20220406154435653.png)
 
 #### 堆的维护
 
@@ -612,7 +631,11 @@ int main(){
 
 ![image-20220406160654511](C:\Users\JavenLu\AppData\Roaming\Typora\typora-user-images\image-20220406160654511.png)
 
-3.若要定义为小根堆:priority_queue <int, vector<int>,greater<int>> //int 也可换为其他类型
+3.若要定义为小根堆:priority_queue <int, vector < int > , greater< int >> //int 也可换为其他类型
+
+
+
+
 
 ## 前缀和
 
@@ -630,7 +653,7 @@ d[i]=a[i]-a[i-1]
 
 区间的左端为相同变化，右端为相反变化，区间内其他值不变。
 
-<img src="C:\Users\JavenLu\AppData\Roaming\Typora\typora-user-images\image-20220327142124828.png" alt="image-20220327142124828" style="zoom: 50%;" />
+![image-20220327142124828](assets\算法-SelfLearning-assets\image-20220327142124828.png)
 
 x(mod i)=x-x 整除 i * i
 
@@ -644,6 +667,10 @@ sum[i][j]=sum[i-1][j]+sum[i][j-1]-sum[i-1][j-1]+a[i][j]
 tot[i][j]=sum[i+c-1][j+c-1]-sum[i-1][j+c-1]-sum[i+c-1][j-1]+sum[i-1][j-1]
 
 ```
+
+
+
+
 
 ## 二分
 
@@ -716,6 +743,10 @@ int main(){
 } 
 ```
 
+
+
+
+
 ## 排序
 
 b站课程:https://www.bilibili.com/video/BV1PT4y13767
@@ -732,7 +763,7 @@ b站课程:https://www.bilibili.com/video/BV1PT4y13767
 
 空间复杂度O(1)一般为原地算法
 
-![image-20220715210216156](assets/image-20220715210216156-20220717142837-gd5mqgl.png)
+![image-20220715210216156](assets\算法-SelfLearning-assets\image-20220715210216156.png)
 
 
 SWAP的宏定义:
@@ -746,6 +777,8 @@ COMPARE的宏定义
 ```C++
 #define COMPARE(x,y) ( ((x)<(y))? -1: ((x)==(y))? 0:1 )
 ```
+
+
 
 ### 冒泡排序（Bubble Sort）
 
@@ -820,6 +853,8 @@ for(int i=N-1;i>=0;i--){
 }
 ```
 
+
+
 ### 选择排序(Selection Sort)
 
 选择排序的交换次数要远远少于冒泡排序,平均性优于冒泡排序.
@@ -850,6 +885,8 @@ for(int i=N-1;i>=0;i--){
 }
 ```
 
+
+
 ### 堆排序（Heap Sort）
 
 优化选择排序时找最大值的做法，使用大顶堆（O（logn））
@@ -877,6 +914,8 @@ for(int i=0;i<N;i++){
 }
 
 ```
+
+
 
 ### 插入排序（Insertion Sort）
 
@@ -1072,6 +1111,8 @@ int main(){
 
 ```
 
+
+
 ### 希尔排序(Shell Sort)
 
 时间复杂度: Ω(N)    θ(N^4/3^~N^2^)
@@ -1097,7 +1138,7 @@ while((t>>=1)>0)
 
 k = 0,1,2,...   直到k>N(元素数量)
 
-![image-20220715215229068](assets/image-20220715215229068-20220717142837-urlomcp.png)
+![image-20220715215229068](assets\算法-SelfLearning-assets\image-20220715215229068.png)
 
 第col列 第row行 步长为step
 
@@ -1163,6 +1204,8 @@ int main(){
 }
 
 ```
+
+
 
 ### 归并排序（Merge Sort）
 
@@ -1302,6 +1345,8 @@ int main(){
 
 ```
 
+
+
 ### 快速排序(Quick Sort)
 
 时间复杂度: Ω(NlogN)  O(NlogN)  θ(N^2^)
@@ -1312,13 +1357,13 @@ int main(){
 
 流程:
 
-![image-20220715153117423](assets/image-20220715153117423-20220717142837-iztmjxi.png)
+![image-20220715153117423](assets\算法-SelfLearning-assets\image-20220715153117423.png)
 
 一般选择begin作为轴点元素,先将轴点元素备份,先从end(此时end是有元素的位置)向左扫描,如果找到比轴点元素大的,直接end--(向右扫描同理);如果找到比轴点元素小的,直接覆盖begin的位置(即已经备份的元素位置).
 
 轴点元素的位置被覆盖 后,每次end--或者begin++后就调换扫描方向.(这时候需要将元素覆盖到另一边时会覆盖到无用的元素(黑色所示, 因为该元素已经覆盖到其他位置了))
 
-![image-20220715154047573](assets/image-20220715154047573-20220717142837-p4zmwqx.png)
+![image-20220715154047573](assets\算法-SelfLearning-assets\image-20220715154047573.png)
 
 最坏情况会O(n^2^)
 
@@ -1429,6 +1474,8 @@ int main(){
 > 之后的排序不是基于比较的排序,以空间换时间,适合对一定范围内的整数进行排序
 >
 
+
+
 ### 计数排序(Counting Sort)
 
 统计所有数字出现的次数, 数组长度为最大数+1
@@ -1529,6 +1576,7 @@ int main(){
 ```
 
 
+
 ### 基数排序（Radix Sort）
 
 时间复杂度： O(d*(n+k))，d为最大位数，k是进制，稳定排序
@@ -1594,6 +1642,7 @@ int main(){
 ```
 
 
+
 ### 桶排序(Bucket Sort)
 
 空间复杂度: O(n+m), m为桶的数量
@@ -1609,6 +1658,7 @@ int main(){
 元素在桶中的索引举例
 
 * 元素值*元素数量
+
 
 
 
@@ -1672,6 +1722,8 @@ for(it=e[a].begin();it!=e[a].end();it++){
 }
 ```
 
+
+
 ### 深度优先搜索
 
 #### 剪枝
@@ -1703,6 +1755,8 @@ int main(){
     return 0;
 }
 ```
+
+
 
 
 
