@@ -12,11 +12,11 @@
 **最差情况 O(N) ：**nums = [a, b, c, ...] 且 nums 中所有数字都不为 77 ，此时线性查找会遍历整个数组，循环 NN 次；
 **平均情况 Θ ：** 需要考虑输入数据的分布情况，计算所有数据情况下的平均时间复杂度；例如本题目，需要考虑数组长度、数组元素的取值范围等；
 
-![image-20220704095638920](assets\算法-SelfLearning-assets\image-20220704095638920.png)
+![image-20220704095638920](assets/算法-SelfLearning-assets/image-20220704095638920.png)
 
 当运行次数与数据无关时，时间复杂度为1
 
-![image-20220704095927155](assets\算法-SelfLearning-assets\image-20220704095927155.png)
+![image-20220704095927155](assets/算法-SelfLearning-assets/image-20220704095927155.png)
 
 冒泡排序的时间复杂对为O（N^2^）
 
@@ -553,7 +553,7 @@ int main(){
 
 例题:洛谷P1540
 
-![image-20220406152757707](assets\算法-SelfLearning-assets\image-20220406152757707.png)
+![image-20220406152757707](assets/算法-SelfLearning-assets/image-20220406152757707.png)
 
 ```C++
 int n,m;
@@ -592,9 +592,9 @@ int main(){
 
 完全二叉树:满二叉树丢掉最后面的连续几个节点
 
-![image-20220406154346323](assets\算法-SelfLearning-assets\image-20220406154346323.png)
+![image-20220406154346323](assets/算法-SelfLearning-assets/image-20220406154346323.png)
 
-![image-20220406154435653](assets\算法-SelfLearning-assets\image-20220406154435653.png)
+![image-20220406154435653](assets/算法-SelfLearning-assets/image-20220406154435653.png)
 
 #### 堆的维护
 
@@ -629,7 +629,7 @@ int main(){
 
 1.默认为大根堆(大顶堆)
 
-![image-20220406160654511](C:\Users\JavenLu\AppData\Roaming\Typora\typora-user-images\image-20220406160654511.png)
+![image-20220406160654511](assets/算法-SelfLearning-assets/image-20220406160654511.png)
 
 3.若要定义为小根堆:priority_queue <int, vector < int > , greater< int >> //int 也可换为其他类型
 
@@ -653,7 +653,7 @@ d[i]=a[i]-a[i-1]
 
 区间的左端为相同变化，右端为相反变化，区间内其他值不变。
 
-![image-20220327142124828](assets\算法-SelfLearning-assets\image-20220327142124828.png)
+![image-20220327142124828](assets/算法-SelfLearning-assets/image-20220327142124828.png)
 
 x(mod i)=x-x 整除 i * i
 
@@ -763,7 +763,7 @@ b站课程:https://www.bilibili.com/video/BV1PT4y13767
 
 空间复杂度O(1)一般为原地算法
 
-![image-20220715210216156](assets\算法-SelfLearning-assets\image-20220715210216156.png)
+![image-20220715210216156](assets/算法-SelfLearning-assets/image-20220715210216156.png)
 
 
 SWAP的宏定义:
@@ -1138,7 +1138,7 @@ while((t>>=1)>0)
 
 k = 0,1,2,...   直到k>N(元素数量)
 
-![image-20220715215229068](assets\算法-SelfLearning-assets\image-20220715215229068.png)
+![image-20220715215229068](assets/算法-SelfLearning-assets/image-20220715215229068.png)
 
 第col列 第row行 步长为step
 
@@ -1357,13 +1357,13 @@ int main(){
 
 流程:
 
-![image-20220715153117423](assets\算法-SelfLearning-assets\image-20220715153117423.png)
+![image-20220715153117423](assets/算法-SelfLearning-assets/image-20220715153117423.png)
 
 一般选择begin作为轴点元素,先将轴点元素备份,先从end(此时end是有元素的位置)向左扫描,如果找到比轴点元素大的,直接end--(向右扫描同理);如果找到比轴点元素小的,直接覆盖begin的位置(即已经备份的元素位置).
 
 轴点元素的位置被覆盖 后,每次end--或者begin++后就调换扫描方向.(这时候需要将元素覆盖到另一边时会覆盖到无用的元素(黑色所示, 因为该元素已经覆盖到其他位置了))
 
-![image-20220715154047573](assets\算法-SelfLearning-assets\image-20220715154047573.png)
+![image-20220715154047573](assets/算法-SelfLearning-assets/image-20220715154047573.png)
 
 最坏情况会O(n^2^)
 
